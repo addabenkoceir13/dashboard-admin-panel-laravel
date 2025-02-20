@@ -15,23 +15,15 @@ use Illuminate\Support\Facades\Session;
 |
 */
 
-$controller_path = 'App\Http\Controllers';
+Route::prefix('/v1/lawyers')->name('lawyers.')->group(function() {
 
-Route::group(['middleware' => ['auth']], function () {
-  Route::get('/theme/{theme}', function($theme){
-    Session::put('theme',$theme);
-    return redirect()->back();
-  });
+  // ** ---------- Start Dev Moahmed -------------------------**
 
-  Route::get('/lang/{lang}', function($lang){
-    Session::put('locale', $lang);
-    App::setLocale($lang);
-    return redirect()->back();
-  });
+
+  // ** ---------- End Dev Moahmed -------------------------**
+
+  // ** ---------- Start Dev Medjadji -------------------------**
+
+
+  // ** ---------- End Dev Medjadji -------------------------**
 });
-
-// Main Page Route
-Route::get('/', 'App\Http\Controllers\dashboard\Analytics@index')->name('dashboard-analytics')->middleware('auth');
-
-
-

@@ -1,0 +1,12 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ rootNamespace }}Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class {{ class }} extends Controller
+{
+    protected const VIEW_PATH = 'v1.';
+    // return view(self::VIEW_PATH . 'index');
+}
